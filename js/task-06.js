@@ -6,9 +6,9 @@ inputEl.addEventListener('input', ()=>{
     
 inputEl.addEventListener('blur', ()=>{
     if(inputEl.value.length < lengthEl || inputEl.value.length > lengthEl ){
-      inputEl.style.borderColor = '#f44336';    
+      inputEl.classList.add('invalid');    
     } else if(inputEl.value.length == lengthEl ){
-        inputEl.style.borderColor = '#4caf50';
+        inputEl.classList.add('valid');
     }
 })
 })
