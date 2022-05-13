@@ -1,16 +1,23 @@
 const styleInput = document.querySelector('style');
 const inputEl = document.querySelector('#validation-input');
 const lengthEl = inputEl.getAttribute('data-length');
-const ifLength = Number(lengthEl.value);
+const ifLength = Number(lengthEl);
 
-inputEl.addEventListener('input', ()=>{
+
+
+inputEl.addEventListener('blur', addClassList) ;
+  //const ifInput = Number(inputEl.value.length);
     
-inputEl.addEventListener('blur', ()=>{
-    if(inputEl.value.length < ifLength || inputEl.value.length > ifLength ){
-      inputEl.classList.add('invalid');    
-    } else if(inputEl.value.length == ifLength ){
-        inputEl.classList.add('valid');
+  function addClassList(){
+  if( inputEl.value.length === Number(lengthEl) ){
+      inputEl.classList.add('valid');    
+    } else{ 
+        inputEl.classList.add('invalid');
     }
+    console.log(Number.isNaN(Number(lengthEl)));
+    console.log(Number.isNaN(inputEl.value.length));
+  }
+
+  
     
-})
-})
+
