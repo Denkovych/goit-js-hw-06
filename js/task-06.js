@@ -6,9 +6,10 @@ inputEl.addEventListener('input', ()=>{
     
 inputEl.addEventListener('blur', ()=>{
     if(inputEl.value.length < lengthEl || inputEl.value.length > lengthEl ){
-      inputEl.classList.add('#validation-input.invalid');    
+      inputEl.classList.add('invalid');    
     } else if(inputEl.value.length == lengthEl ){
-        inputEl.classList.add('#validation-input.valid');
+        inputEl.classList.add('valid');
     }
 })
 })
+console.log(lengthEl);
