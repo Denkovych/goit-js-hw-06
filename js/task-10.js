@@ -5,6 +5,7 @@ const refs = {
   btnDestroy: document.querySelector('[data-destroy]'),
   boxes: document.querySelector('#boxes'),
   }
+ 
 function getRandomHexColor() {
   return `#${Math.floor(Math.random() * 16777215)
     .toString(16)
@@ -15,7 +16,7 @@ refs.inputEl.addEventListener('input',  ()=> {
   
 function createBoxes(amount){
   amount = refs.inputEl.value; 
-    console.log(amount);
+    
     let allDiv = document.createDocumentFragment();
     for(let i = 0; i < amount; i+=1){
       let htmlDiv =  document.createElement("div");
@@ -28,6 +29,9 @@ function createBoxes(amount){
     }
     refs.boxes.append(allDiv);
     console.log(refs.boxes);
+
+
+
   }
 })
 
