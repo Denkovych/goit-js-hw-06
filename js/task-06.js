@@ -10,12 +10,14 @@ inputEl.addEventListener('blur', addClassList) ;
     
   function addClassList(){
   if( inputEl.value.length === Number(lengthEl) ){
-      inputEl.classList.add('valid');    
+      inputEl.classList.add('valid');
+      inputEl.classList.remove('invalid');  
     } else{ 
-        inputEl.classList.add('invalid');
+      inputEl.classList.remove('valid');
+      inputEl.classList.add('invalid');
     }
-    console.log(Number.isNaN(Number(lengthEl)));
-    console.log(Number.isNaN(inputEl.value.length));
+    console.log(Number(lengthEl));
+    console.log(inputEl.value.length);
   }
 
   
