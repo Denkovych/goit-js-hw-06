@@ -9,6 +9,6 @@ function getRandomHexColor() {
 }
 btnChangeColor.addEventListener('click', onWidjetClick);
 function onWidjetClick (event){
-  widget.style.backgroundColor = getRandomHexColor();
+  document.body.style.backgroundColor = getRandomHexColor();
   nameBackgroundColor.textContent = getRandomHexColor();
 }
