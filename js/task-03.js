@@ -15,10 +15,9 @@ const images = [
 
 const list = document.querySelector('.gallery');
 console.log(list);
+
 const markup = images.map((image) =>
-  `<li><img src = ${image.url} alt = ${image.alt} width = 300 ></img></li>`
-  
- ).join('');
+  `<li><img src = ${image.url} alt = ${image.alt} width = 300 height = 250 ></img></li>`).join('');
 
 list.insertAdjacentHTML("beforeend", markup);
 list.style.display = 'flex';
@@ -29,6 +28,5 @@ const listGallery = list.querySelectorAll('li');
 listGallery.forEach((img)=>{
   const setImg = img.querySelector('img');
   setImg.style.marginRight = '30px';
-  setImg.style.height = '250px';
-})
+  setImg.style.objectFit = 'cover'; })
 
