@@ -15,7 +15,7 @@ function getRandomHexColor() {
 refs.btnCreate.addEventListener('click', createBoxes);
 refs.btnDestroy.addEventListener('click', destroyBoxes);  
 function createBoxes(amount){
-  amount = refs.inputEl.value; 
+    amount = refs.inputEl.value; 
     
   let allDiv = document.createDocumentFragment();
 
@@ -35,7 +35,7 @@ function createBoxes(amount){
     console.log(refs.boxes)
 function destroyBoxes(){
  
-  refs.boxes.innerHTML = '';
+    refs.boxes.innerHTML = '';
   
 }    
 
